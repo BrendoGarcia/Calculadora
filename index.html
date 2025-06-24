@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Verbas Rescisórias</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Verbas Rescisórias</h1>
+    <form id="calcForm">
+      <label>Salário Bruto (R$):</label>
+      <input type="number" id="salario" required />
+
+      <label>Dias trabalhados no mês:</label>
+      <input type="number" id="diasTrabalhados" max="31" required />
+
+      <label>Dias de falta injustificada:</label>
+      <input type="number" id="faltas" required />
+
+      <label>Meses trabalhados no ano (13º):</label>
+      <input type="number" id="meses13" max="12" required />
+
+      <label>Férias vencidas?</label>
+      <select id="feriasVencidas">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label>Meses de férias proporcionais:</label>
+      <input type="number" id="feriasProporcionais" max="12" required />
+
+      <label>Total de horas extras:</label>
+      <input type="number" id="horasExtras" required />
+
+      <label>Valor da hora (R$):</label>
+      <input type="number" id="valorHora" required />
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
